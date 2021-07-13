@@ -1,0 +1,6 @@
+<ng-container [ngSwitch]="type">
+  <button *ngSwitchDefault mat-button [color]="color" [disabled]="disabled" (click)="onClick.emit($event)">{{text}}</button>
+  <button *ngSwitchCase="'raised'" mat-raised-button [color]="color" [disabled]="disabled" (click)="onClick.emit($event)">{{ text }}</button>
+  <button *ngSwitchCase="'stroked'" mat-stroked-button [color]="color" [disabled]="disabled" (click)="onClick.emit($event)">{{ text }}</button>
+  <button *ngSwitchCase="'flat'" mat-flat-button [color]="color" [disabled]="disabled" (click)="onClick.emit($event)">{{ text }}</button>
+</ng-container>
